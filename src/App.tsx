@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Menu, X, MessageCircle, Users, Target, ChartBar, ArrowUpRight, Linkedin } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, type ReactNode } from 'react';
 
 const PARTNER_LOGOS = [
   "https://firebasestorage.googleapis.com/v0/b/studio-299688656-32cdd.firebasestorage.app/o/media%2F1767103364622_16.png?alt=media&token=bdad3a1d-d6c9-4651-baeb-d87da85aff46",
@@ -22,7 +22,7 @@ const PARTNER_LOGOS = [
   "https://firebasestorage.googleapis.com/v0/b/studio-299688656-32cdd.firebasestorage.app/o/media%2F1767103659512_Copy%20of%20HALO%20HRDKU%20(2).png?alt=media&token=79d44723-754b-4ba6-82f9-f53227365169"
 ];
 
-const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string }) => {
+const FadeIn = ({ children, delay = 0, className = "" }: { children: ReactNode, delay?: number, className?: string }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
